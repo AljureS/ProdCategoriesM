@@ -20,7 +20,7 @@ dotenvConfig({path: '.development.env'});
       migrations: ['dist/migrations/*{.ts,.js}'], 
       logging: true,
       synchronize: true,
-      dropSchema: true,
+      // dropSchema: true,
 
     })
   ],
