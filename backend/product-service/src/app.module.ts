@@ -4,6 +4,9 @@ import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {config as dotenvConfig} from 'dotenv';
+const { CategoryModule } = require('./category/category.module');
+
+// import { CategoryModule } from './category/category.module';
 dotenvConfig({path: '.development.env'});
 
 @Module({
@@ -22,7 +25,7 @@ dotenvConfig({path: '.development.env'});
       synchronize: true,
       // dropSchema: true,
 
-    })
+    }), 
   ],
   controllers: [AppController],
   providers: [AppService],
