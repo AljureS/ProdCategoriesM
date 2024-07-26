@@ -1,15 +1,20 @@
-require('dotenv').config()
+// require('dotenv').config()
+// const { createConnection } = require('typeorm');
 
-module.exports = {
-    type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'tu_usuario',
-    password: 'tu_contraseña',
-    database: 'category_service_db',
-    synchronize: true,
-    logging: false,
-    entities: [
-        'entity/*.js'
-    ],
-};
+// createConnection({
+//     type: 'postgres',
+//     host: 'localhost',
+//     port: 5432,
+//     username: process.env.DB_USERNAME,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME,
+//     synchronize: true,
+//     logging: false,
+//     entities: [
+//         'entity/*.js'
+//     ],
+//     // dropSchema: true
+// })
+// module.exports = {
+//     createConnection
+// };
