@@ -28,10 +28,15 @@ const createCategory = async (req, res) => {
 
 const updateCategory = async (req, res) => {
     try {
+        const { id } = req.params;
+        
         const categoryRepository = getRepository(CategorySchema);
-        await categoryRepository.update(req.params.id, req.body);
-        const updatedCategory = await categoryRepository.findOne(req.params.id);
-        res.json(updatedCategory);
+        const updateResult = await categoryRepository.update(id, req.body);
+        if (updateResult.affected === 0) {
+            return res.status(404).json({ message: 'Categoría no encontrada' });
+        }
+        // const updatedCategory = await categoryRepository.findOne(id);
+        res.status(200).json({message: `Category with id: ${id} updated`});
     } catch (error) {
         res.status(500).json({ message: 'Error al actualizar la categoría' });
     }
