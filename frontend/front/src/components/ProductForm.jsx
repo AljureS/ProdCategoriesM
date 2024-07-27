@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CategoryForm = ({ initialData = {}, onSubmit }) => {
+const ProductForm = ({ initialData = {}, onSubmit }) => {
     const [name, setName] = useState(initialData.name || '');
 
     const handleSubmit = (e) => {
@@ -24,4 +24,5 @@ const CategoryForm = ({ initialData = {}, onSubmit }) => {
     );
 };
 
-export default CategoryForm;
+export default ProductForm;
+
