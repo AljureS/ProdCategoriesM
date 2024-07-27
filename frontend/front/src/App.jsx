@@ -17,7 +17,7 @@ function App() {
           </Link>
         </nav>
         <Routes>
-          <Route path="/categories" element={<Category/>} />
+          <Route path="/category" element={<Category/>} />
           <Route path="/products" element={<Product/>} />
         </Routes>
       </div>
